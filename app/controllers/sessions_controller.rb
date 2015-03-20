@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:session][:username].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user
-      redirect_to blog
+      redirect_to entry
     else
       flash[:danger] = "This is for admins only"
       render 'new'
@@ -14,5 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    log_out
+    redirect_to root_url
   end
 end
