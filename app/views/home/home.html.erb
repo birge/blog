@@ -1,3 +1,11 @@
 <% provide(:title, "Home") %>
 
-<h1>Home</h1>
+<h1>Entries</h1>
+
+<% @entries.each do |entry| %>
+  <p>Title: <%= entry.title %></p>
+  <p>Body: <%= entry.body %></p>
+  <% entry.tags.each do |tag| %>
+    <span>| <%= tag.tagType %> </span>
+  <% end %>
+<% end %>
