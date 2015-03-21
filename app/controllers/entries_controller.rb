@@ -17,4 +17,9 @@ class EntriesController < ApplicationController
       render action: :new
     end
   end
+
+  def edit
+    @entry = Entry.find(params[:id])
+    @entry.spaced_tags = @entry.tags.map(&:tagType).join(" ")
+  end
 end
