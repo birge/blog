@@ -5,5 +5,8 @@
   <%= f.label :body %>
   <%= f.text_area :body, class: 'form-control' %>
 
-  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <%= f.label :tags %>
+  <%= f.text_field :spaced_tags, class: 'form-control' %>
+
+  <%= f.submit ( f.object.new_record? ? "Create" : "Update"), class: "btn btn-primary" %>
 <% end %>
