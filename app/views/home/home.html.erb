@@ -1,7 +1,9 @@
 <% provide(:title, "Home") %>
 
 <h1>Entries</h1>
-
+<% if signed_in? %>
+  <%= link_to "Log out", logout_path, method: :delete %>
+<% end %>
 <% @entries.each do |entry| %>
   <%= link_to "Edit", edit_entry_path(entry) %>
   <p>Title: <%= entry.title %></p>
