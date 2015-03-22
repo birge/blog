@@ -17,18 +17,24 @@
     <div class="col-md-3">
       <h2 class="blog-date"><%= entry.created_at.strftime("%a, %B %e %Y") %></h2>
       <div class="blog-stats">
-
         <h5>Comments</h5>
+        <div class="comments">
+          <a><%= entry.comments.size %></a>
+        </div>
         <h5>Tags</h5>
-        <p class="tags">
-          <% entry.tags.each do |tag, index| %>
-            <% if index == entry.tags.size - 1 %>
-              <span><%= tag.tagType %></span>
-            <% else %>
-              <span><%= tag.tagType %></span>
+        <div class="tags">
+          <% if entry.tags.any? %>
+            <% entry.tags.each do |tag, index| %>
+              <% if index == entry.tags.size - 1 %>
+                <a><%= tag.tagType %></a>
+              <% else %>
+                <a><%= tag.tagType %></a>
+              <% end %>
             <% end %>
+          <% else %>
+            <p>None</p>
           <% end %>
-        </p>
+        </div>
       </div>
     </div>
   </div>
