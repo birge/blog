@@ -1,4 +1,6 @@
 class EntriesController < ApplicationController
+  before_action :signed_in_user
+
   def new
     @entry = Entry.new
   end
@@ -40,4 +42,10 @@ class EntriesController < ApplicationController
       redirect_to edit_entry_path(@entry)
     end
   end
+
+  private
+
+    def signed_in_user
+      redirect_to root_path unless signed_in?
+    end
 end
