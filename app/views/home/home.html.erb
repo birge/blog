@@ -24,11 +24,11 @@
         <h5>Tags</h5>
         <div class="tags">
           <% if entry.tags.any? %>
-            <% entry.tags.each do |tag, index| %>
+            <% entry.tags.each_with_index do |tag, index| %>
               <% if index == entry.tags.size - 1 %>
                 <a><%= tag.tagType %></a>
               <% else %>
-                <a><%= tag.tagType %></a>
+                <a><%= tag.tagType %></a>,
               <% end %>
             <% end %>
           <% else %>
