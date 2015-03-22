@@ -8,11 +8,18 @@
 </head>
 <body>
 
-<div class="container">
-  <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>"><%= message %></div>
-  <% end %>
-  <%= yield %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2" style="border: 1px solid black">
+      <%= render "layouts/side_menu" %>
+    </div>
+    <div class="col-md-10" style="border: 1px solid black">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </div>
 </div>
 
 </body>
