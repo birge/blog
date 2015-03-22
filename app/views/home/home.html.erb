@@ -1,14 +1,37 @@
 <% provide(:title, "Home") %>
 
-<h1>Entries</h1>
 <% if signed_in? %>
-  <%= link_to "Log out", logout_path, method: :delete %>
+  <div><%= link_to "Log out", logout_path, method: :delete %></div>
 <% end %>
 <% @entries.each do |entry| %>
-  <%= link_to "Edit", edit_entry_path(entry) %>
-  <p>Title: <%= entry.title %></p>
-  <p>Body: <%= simple_format(entry.body) %></p>
-  <% entry.tags.each do |tag| %>
-    <span>| <%= tag.tagType %> </span>
-  <% end %>
+  <div class="row blog-package">
+    <div class="col-md-9">
+      <div class="blog-post">
+        <h2><%= entry.title %></h2>
+        <% if signed_in? %>
+          <p><%= link_to "Edit", edit_entry_path(entry) %></p>
+        <% end %>
+        <p><%= simple_format(entry.body) %></p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h2 class="blog-date"><%= entry.created_at.strftime("%a, %B %e %Y") %></h2>
+      <div class="blog-stats">
+
+        <h5>Comments</h5>
+        <h5>Tags</h5>
+        <p class="tags">
+          <% entry.tags.each do |tag, index| %>
+            <% if index == entry.tags.size - 1 %>
+              <span><%= tag.tagType %></span>
+            <% else %>
+              <span><%= tag.tagType %></span>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
 <% end %>

@@ -1,0 +1,26 @@
+@import "variables";
+
+.blog-package {
+  margin-top: 20px;
+}
+.blog-post {
+  h2 {
+    margin: 0px;
+  }
+  background-color: white;
+  padding: 15px;
+}
+
+.blog-date {
+  padding: 10px;
+  background-color: $red;
+  margin: 0px;
+}
+
+.blog-stats {
+  padding: 5px;
+  background-color: black;
+  h5 {
+    color: white;
+  }
+}
