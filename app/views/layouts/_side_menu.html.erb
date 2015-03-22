@@ -1,8 +1,17 @@
+<div class="text-center" style="font-size: 6em;"><a class="fa fa-code" href="<%= root_path %>"></a></div>
 <h2 class="text-center">Birge Clark</h2>
 <h4 class="text-center">Web Developer</h4>
 <ul class="nav nav-pills nav-stacked">
-  <li><%= link_to "Blog", root_path %></li>
-  <li><%= link_to "Code", "https://github.com/birge" %></li>
-  <li><%= link_to "Contact", root_path %></li>
-  <li><%= link_to "About", about_path %></li>
+  <li>
+    <a href="<%= root_path %>"><span class="fa fa-file-text-o"></span> Blog</a>
+  </li>
+  <li>
+    <a href="https://github.com/birge"><span class="fa fa-github"></span> Code</a>
+  </li>
+  <li>
+    <a href="<%= root_path %>"><span class="fa fa-envelope-o"></span> Contact</a>
+  </li>
+  <li>
+    <a href="<%= about_path %>"><span class="fa fa-user"></span> About</a>
+  </li>
 </ul>
