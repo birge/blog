@@ -17,10 +17,6 @@
     <div class="col-md-3">
       <h2 class="blog-date"><%= entry.created_at.strftime("%a, %B %e %Y") %></h2>
       <div class="blog-stats">
-        <h5>Comments</h5>
-        <div class="comments">
-          <a><%= entry.comments.size %></a>
-        </div>
         <h5>Tags</h5>
         <div class="tags">
           <% if entry.tags.any? %>
