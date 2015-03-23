@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get    'about',  to: 'home#about'
   resources :entries
 
-  get '*a',         to: 'home#wrong_url'
+  get '*a',        to: 'home#wrong_url'
 end
