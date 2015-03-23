@@ -5,4 +5,8 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def wrong_url
+    redirect_to root_path
+  end
 end
