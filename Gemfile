@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
+gem 'will_paginate', '~> 3.0.6'
 
 group :development do
   gem 'spring'
