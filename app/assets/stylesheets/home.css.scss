@@ -1,9 +1,15 @@
 @import "variables";
 
+pre {
+  padding: 0px !important;
+}
 .blog-package {
   margin-top: 20px;
 }
 .blog-post {
+  .blog-main-text {
+    white-space: pre-wrap;
+  }
   h2 {
     margin: 0px;
   }
@@ -20,5 +26,5 @@
 .blog-stats {
   color: white;
   padding: 5px 15px 15px 15px;
-  background-color: black;
+  background-color: #3f3f3f;
 }
