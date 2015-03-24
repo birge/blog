@@ -8,6 +8,11 @@ body {
   font-size: 16px;
 }
 
+code {
+  background-color: $gray;
+  color: $salmon;
+}
+
 .gray {
   color: $gray;
 }
