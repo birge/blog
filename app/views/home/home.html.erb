@@ -4,7 +4,7 @@
   <div><%= link_to "Log out", logout_path, method: :delete %></div>
 <% end %>
 <% @entries.each do |entry| %>
-  <div class="row blog-package">
+  <section class="row blog-package">
     <div class="col-md-9">
       <div class="blog-post">
         <h2 class="gray"><%= entry.title %></h2>
@@ -34,8 +34,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 <% end %>
-<div class="col-md-9 text-center">
+<section class="col-md-9 text-center pagination">
   <%= will_paginate @entries %>
-</div>
+</section>
