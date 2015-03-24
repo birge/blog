@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+(function() {
+
+"use strict";
+
+hljs.initHighlightingOnLoad();
+
+})();
