@@ -1,19 +1,19 @@
 <div class="text-center" id="side-menu">
   <a id="main-logo" class="fa fa-code" href="<%= root_path %>"></a>
   <h2 class="light-blue">Birge Clark</h2>
-  <h4>Web Developer</h4>
+  <h4 class="off-white">Web Developer</h4>
   <ul class="nav nav-stacked">
     <li class="<%= controller.class == HomeController and controller.action_name == 'home' ? 'active' : '' %>">
-      <a href="<%= root_path %>" class="purple"><span class="fa fa-file-text-o"></span> Blog</a>
+      <a href="<%= root_path %>" class="salmon"><span class="fa fa-file-text-o"></span> Blog</a>
     </li>
     <li>
       <a href="https://github.com/birge"><span class="fa fa-github"></span> Code</a>
     </li>
     <li class="<%= controller.class == HomeController and controller.action_name == 'contact' ? 'active' : '' %>">
-      <a href="<%= root_path %>"><span class="fa fa-envelope-o"></span> Contact</a>
+      <a href="<%= root_path %>" class="gold"><span class="fa fa-envelope-o"></span> Contact</a>
     </li>
     <li class="<%= controller.class == HomeController and controller.action_name == 'about' ? 'active' : '' %>">
-      <a href="<%= about_path %>"><span class="fa fa-user"></span> About</a>
+      <a href="<%= about_path %>" class="teal"><span class="fa fa-user"></span> About</a>
     </li>
   </ul>
 </div>

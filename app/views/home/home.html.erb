@@ -7,7 +7,7 @@
   <div class="row blog-package">
     <div class="col-md-9">
       <div class="blog-post">
-        <h2><%= entry.title %></h2>
+        <h2 class="gray"><%= entry.title %></h2>
         <% if signed_in? %>
           <p><%= link_to "Edit", edit_entry_path(entry) %></p>
         <% end %>
@@ -17,7 +17,7 @@
     <div class="col-md-3">
       <h2 class="blog-date"><%= entry.created_at.strftime("%a, %B %e %Y") %></h2>
       <div class="blog-stats">
-        <h5>Tags</h5>
+        <h5 class="off-white">Tags</h5>
         <div class="tags">
           <% if entry.tags.any? %>
             <% entry.tags.each_with_index do |tag, index| %>
