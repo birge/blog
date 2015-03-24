@@ -20,6 +20,13 @@
 
 "use strict";
 
-hljs.initHighlightingOnLoad();
+var ready = function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+};
+
+$(document).ready(ready);
+$(document).on("page:load", ready);
 
 })();
