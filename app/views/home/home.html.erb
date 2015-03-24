@@ -8,6 +8,7 @@
     <div class="col-md-9">
       <div class="blog-post">
         <h2 class="gray"><%= entry.title %></h2>
+        <hr>
         <% if signed_in? %>
           <p><%= link_to "Edit", edit_entry_path(entry) %></p>
         <% end %>
