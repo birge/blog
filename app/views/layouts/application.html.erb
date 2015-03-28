@@ -16,7 +16,11 @@
     </div>
     <div class="col-md-10">
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <div class="col-md-9 alert alert-<%= message_type %>">
+          <% message.each do |arr_message| %>
+            <p class="text-center"><%= arr_message %></p>
+          <% end %>
+        </div>
       <% end %>
       <%= yield %>
     </div>

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to new_entry_path
     else
-      flash[:danger] = "This is for admins only"
+      flash[:danger] = ["This is for admins only"]
       render 'new'
     end
   end
