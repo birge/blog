@@ -10,7 +10,7 @@
       <a href="https://github.com/birge"><span class="fa fa-github"></span> Code</a>
     </li>
     <li class="<%= controller.class == HomeController and controller.action_name == 'contact' ? 'active' : '' %>">
-      <a href="<%= root_path %>" class="gold"><span class="fa fa-envelope-o"></span> Contact</a>
+      <a href="<%= contact_path %>" class="gold"><span class="fa fa-envelope-o"></span> Contact</a>
     </li>
     <li class="<%= controller.class == HomeController and controller.action_name == 'about' ? 'active' : '' %>">
       <a href="<%= about_path %>" class="teal"><span class="fa fa-user"></span> About</a>
