@@ -23,13 +23,13 @@
           <% if entry.tags.any? %>
             <% entry.tags.each_with_index do |tag, index| %>
               <% if index == entry.tags.size - 1 %>
-                <a><%= tag.tagType %></a>
+                <%= link_to tag.tagType, root_path(tag: tag.tagType) %>
               <% else %>
-                <a><%= tag.tagType %></a>,
+                <%= link_to tag.tagType, root_path(tag: tag.tagType) %>,
               <% end %>
             <% end %>
           <% else %>
-            <a>None</a>
+            <p>None</p>
           <% end %>
         </div>
       </div>
