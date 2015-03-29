@@ -9,7 +9,7 @@
     <li>
       <a href="https://github.com/birge"><span class="fa fa-github"></span> Code</a>
     </li>
-    <li class="<%= controller.class == HomeController and controller.action_name == 'contact' ? 'active' : '' %>">
+    <li class="<%= controller.class == MessagesController and controller.action_name == 'new' ? 'active' : '' %>">
       <a href="<%= contact_path %>" class="gold"><span class="fa fa-envelope-o"></span> Contact</a>
     </li>
     <li class="<%= controller.class == HomeController and controller.action_name == 'about' ? 'active' : '' %>">
