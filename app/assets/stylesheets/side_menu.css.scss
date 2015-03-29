@@ -13,5 +13,17 @@
 
   .nav {
     background-color: #3f3f3f;
+    @media screen and (max-width: 991px) {
+      padding: 0px;
+      li {
+        width: 24%;
+        display: inline-block;
+      }
+      a {
+        width: 100%;
+        display: inline-block;
+      }
+      background-color: #3f3f3f;
+    }
   }
 }
