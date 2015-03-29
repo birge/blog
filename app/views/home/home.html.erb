@@ -5,17 +5,7 @@
 <% end %>
 <% @entries.each do |entry| %>
   <section class="row blog-package">
-    <div class="col-md-9">
-      <div class="blog-post">
-        <h2 class="gray"><%= entry.title %></h2>
-        <hr>
-        <% if signed_in? %>
-          <p><%= link_to "Edit", edit_entry_path(entry) %></p>
-        <% end %>
-        <p class="blog-main-text"><%= entry.body.html_safe %></p>
-      </div>
-    </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-md-push-9">
       <h2 class="blog-date"><%= entry.created_at.strftime("%a, %B %e %Y") %></h2>
       <div class="blog-stats">
         <h5 class="off-white">Tags</h5>
@@ -32,6 +22,16 @@
             <p>None</p>
           <% end %>
         </div>
+      </div>
+    </div>
+    <div class="col-md-9 col-md-pull-3">
+      <div class="blog-post">
+        <h2 class="gray"><%= entry.title %></h2>
+        <hr>
+        <% if signed_in? %>
+          <p><%= link_to "Edit", edit_entry_path(entry) %></p>
+        <% end %>
+        <p class="blog-main-text"><%= entry.body.html_safe %></p>
       </div>
     </div>
   </section>
